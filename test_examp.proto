@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message In_pb {
+    string a_string = 1;
+    double a_double = 2;
+    uint64 a_uint64 = 3;
+}
+
+message Out_pb {
+    int32  a_int32 = 1;
+    float  a_float = 2;
+    string a_string = 3;
+}
+
