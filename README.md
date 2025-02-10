@@ -20,6 +20,13 @@ where calls into python are (unfortunately) serialized and processed
 one-at-a-time by a special python-running thread. In each case the caller
 that pushed into the queue blocks waiting to be notified of its result.
 
+#### UPDATE !!!
+
+With the help of people from the pybind discussion, I was able to make
+the gil locking work without the use of a work queue. I have added
+a minimal example here called `no_queue.cc`. You can use this entirely
+instead of `pycall.hpp`
+
 ### Protobufs
 
 A common way of sharing data between python and c++ is via protobufs,
